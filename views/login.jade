@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    form(id="login", action="/dologin" method="post")
+    input(type="text", placeholder="username", id="username" name="username")
+    br
+    br
+    input(type="text", placeholder="password", id="password" name="password")
+    br
+    br
+    input(id="button", type="button",value="提交" onclick="submit()")
+
+  script(src="/javascripts/login.js")
